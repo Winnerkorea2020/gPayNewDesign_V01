@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Box Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Base Css -->
+    <link rel="stylesheet" href="./assets/css/base.css" />
+
+    <!-- Components Css -->
+    <link rel="stylesheet" href="./assets/css/components/modal.css" />
+
+    <title>QR-CODE Camera</title>
+  </head>
+  <!-- 22-10-10 -->
+  <body class="w-full h-screen bg-white text-xs pt-12">
+    <!-- 22-10-10 -->
+    <header class="fixed flex top-0 left-0 w-full bg-main-color z-20 px-4 duration-500 ease-in h-12">
+      <!-- 22-10-10 -->
+      <nav class="flex justify-between items-center w-full h-full z-50 relative border-b border-b-gray-400">
+        <!-- 22-10-10 -->
+        <!-- Navigation Toggle Button | Start -->
+        <div class="flex justify-between items-center w-full text-lg">
+          <div class="inline-flex" id="nav-toggle">
+            <i class="bx bx-grid-alt cursor-pointer"></i>
+          </div>
+          <!-- 22-10-10 -->
+          <a href="home.html" class="font-bold tracking-tighter leading-4 text-center text-xs">
+            Multi <br />
+            Wallet
+          </a>
+          <!-- 22-10-10 -->
+        </div>
+        <!-- Navigation Toggle Button | End -->
+        <!-- Navigation Menu | Start -->
+        <div class="absolute w-full hidden h-full top-20 left-0 py-4" id="nav-menu">
+          <ul
+            class="flex flex-col px-12 h-[60vh] py-16 gap-6 bg-main-color shadow shadow-gray-600 rounded-xl transition-shadow"
+          >
+            <li class="font-bold">
+              <a href="home.html" class="text-sm hover:text-yellow-400"> Home</a>
+            </li>
+            <li class="font-bold">
+              <a href="transaction.html" class="text-sm hover:text-yellow-400">G Transactions</a>
+            </li>
+            <li class="font-bold">
+              <a href="historyconversion.html" class="text-sm hover:text-yellow-400">G-Pay Conversion History</a>
+            </li>
+            <li class="font-bold">
+              <a href="historypayment.html" class="text-sm hover:text-yellow-400">G-Pay Payment History</a>
+            </li>
+            <li class="font-bold">
+              <a href="mypage.html" class="text-sm hover:text-yellow-400"> My Page</a>
+            </li>
+            <li class="font-bold">
+              <div class="text-sm hover:text-yellow-400" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Language
+              </div>
+            </li>
+            <li class="font-bold mt-28">
+              <a href="#" class="text-sm hover:text-yellow-400">Log Out</a>
+            </li>
+          </ul>
+
+          <div class="absolute top-10 left-5 font-bold cursor-pointer" id="nav-close">
+            <i class="bx bx-x text-lg"></i>
+          </div>
+        </div>
+        <!-- Navigation Menu | End -->
+      </nav>
+    </header>
+    <!-- language  Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content rounded-lg p-5">
+          <div class="modal-header text-center">
+            <h5 class="modal-title w-full" id="exampleModalLabel">
+              <div class="w-full flex flex-col items-center">
+                <svg
+                  class="mx-auto mb-4 w-14 h-14 text-gray-400 dark:text-gray-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-center text-lg font-normal text-gray-500 py-5 grid grid-cols-1 gap-2">
+              <a href="" class="block hover:text-blue-800">KOREA </a>
+              <a href="" class="block hover:text-blue-800">INDIA</a>
+              <a href="" class="block hover:text-blue-800">THAILAND</a>
+              <a href="" class="block hover:text-blue-800">VIETNAM</a>
+              <a href="" class="block hover:text-blue-800">PHILIPPINES</a>
+              <a href="" class="block hover:text-blue-800">SINGAPORE</a>
+              <a href="" class="block hover:text-blue-800">CHINA</a>
+              <a href="" class="block hover:text-blue-800">JAPAN</a>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              data-bs-dismiss="modal"
+              type="button"
+              class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+            >
+              Changes
+            </button>
+            <button
+              data-bs-dismiss="modal"
+              type="button"
+              class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10"
+            >
+              cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="">
+      <section class="container mx-auto">
+        <!-- 22-10-10 -->
+        <a href="home.html" class="text-sm flex items-center gap-2 shadow bg-main-color px-3 py-5 rounded-b-2xl">
+          <i class="bx bx-chevron-left bx-sm"></i>
+          <div class="font-semibold">G-Pay Conversion</div>
+        </a>
+        <!-- 22-10-10 -->
+      </section>
+      <!-- 22-10-10 -->
+      <section class="container mx-auto mt-8 px-8">
+        <div class="bg-white border px-3 py-2 rounded-lg shadow">
+          <div class="flex flex-col justify-end items-center">
+            <!-- QR CODE camera Area | Start -->
+            <div class="flex items-end gap-1 w-full h-96 bg-gray-600 mt-2">
+              <div class="" id=""></div>
+            </div>
+            <!-- QR CODE camera Area | End -->
+          </div>
+          <div class="mt-2 pb-1">
+            Align the QR code and barcode within the guide line and it will be recognized automatically
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <!-- Side Navigation JS -->
+    <script src="./assets/js/navi.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

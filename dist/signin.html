@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Box Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Base Css -->
+    <link rel="stylesheet" href="./assets/css/base.css" />
+
+    <!-- Components Css -->
+    <link rel="stylesheet" href="./assets/css/components/modal.css" />
+
+    <title>Document</title>
+  </head>
+  <body
+    class="w-full h-screen bg-gray-50 text-xs bg-no-repeat bg-cover"
+    style="background-image: url(./assets/img/bg/bg2.jpg)"
+  >
+    <!-- language  -->
+    <div class="absolute top-6 right-6">
+      <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class="bx bx-globe bx-md"></i>
+      </div>
+    </div>
+
+    <!-- language  Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content rounded-lg p-5">
+          <div class="modal-header text-center">
+            <h5 class="modal-title w-full" id="exampleModalLabel">
+              <div class="w-full flex flex-col items-center">
+                <svg
+                  class="mx-auto mb-4 w-14 h-14 text-gray-400 dark:text-gray-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-center text-lg font-normal text-gray-500 py-5 grid grid-cols-1 gap-2">
+              <a href="" class="block hover:text-blue-800">KOREA </a>
+              <a href="" class="block hover:text-blue-800">INDIA</a>
+              <a href="" class="block hover:text-blue-800">THAILAND</a>
+              <a href="" class="block hover:text-blue-800">VIETNAM</a>
+              <a href="" class="block hover:text-blue-800">PHILIPPINES</a>
+              <a href="" class="block hover:text-blue-800">SINGAPORE</a>
+              <a href="" class="block hover:text-blue-800">CHINA</a>
+              <a href="" class="block hover:text-blue-800">JAPAN</a>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              data-bs-dismiss="modal"
+              type="button"
+              class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+            >
+              Changes
+            </button>
+            <button
+              data-bs-dismiss="modal"
+              type="button"
+              class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10"
+            >
+              cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="pb-5 w-full px-5">
+      <!-- Log Area | Start -->
+
+      <div class="pt-4">
+        <div class="flex flex-col justify-center items-center h-52 z-50">
+          <img src="./assets/img/brandLogo.png" alt="" width="95px" height="95px" />
+        </div>
+      </div>
+      <!-- Log Area | END -->
+      <!-- Log in Area | Start -->
+      <div class="w-full px-5 rounded-3xl bg-gray-700 p-3 border-2 border-gray-700 shadow shadow-gray-700">
+        <h3 class="text-xl tracking-tight font-medium pt-10 text-white">Mulity Wallet!</h3>
+        <div class="text-2xl pb-8">
+          <span class="text-red-400 tracking-tighter font-semibold"> Log in</span>
+          <span class="text-white">to your Account.</span>
+        </div>
+
+        <form class="w-full text-lg text-white">
+          <div class="pb-3">
+            <div class="mb-2">
+              <label class="block font-semibold md:text-right pr-4" for="inline-full-name"> ID </label>
+            </div>
+            <div class="mb-2">
+              <input
+                class="bg-gray-50 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                id="inline-full-name"
+                type="text"
+                placeholder="ID"
+                required
+              />
+            </div>
+          </div>
+          <div class="pb-3">
+            <div class="mb-2">
+              <label class="block font-semibold md:text-right pr-4" for="inline-password"> Password </label>
+            </div>
+            <div class="mb-2">
+              <input
+                class="bg-gray-50 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                id="inline-password"
+                type="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+          </div>
+          <div class="pb-3">
+            <div class=""></div>
+            <label class="block font-bold">
+              <input class="mr-2 leading-tight" type="checkbox" />
+              <span class="text-sm"> Save ID </span>
+            </label>
+          </div>
+          <div class="text-xl">
+            <div class="w-full">
+              <input
+                class="w-full shadow bg-red-400 hover:bg-red-300 focus:shadow-outline focus:outline-none text-white font-semibold py-3 px-4 rounded-xl"
+                type="submit"
+                value="Log In"
+                onclick="location.href='home.html'"
+              />
+            </div>
+          </div>
+        </form>
+        <form action="" class="pb-8 text-white">
+          <div class="text-center mt-2">
+            <span>Create a New wallet.</span>
+            <a
+              href="siginup.html"
+              class="text-red-500 font-semibold cursor-pointer hover:text-red-600"
+              type="button"
+              onclick="location.href='siginup.html'"
+              >Sign Up</a
+            >
+          </div>
+          <div class="flex mt-2 flex-col items-center">
+            <div class="pr-1">Forgot your account?</div>
+            <div class="flex items-center text-xs">
+              <a href="findid.html" class="font-semibold text-red-500">Find ID</a>
+              <div class="mx-1">or</div>
+              <a href="findpassword.html" class="font-semibold text-red-500">Find Password</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Box Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Base Css -->
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <!-- Components Css -->
+    <link rel="stylesheet" href="./assets/css/components/modal.css" />
+
+    <title>G-Pay Conversion</title>
+  </head>
+  <!-- 22-10-10 -->
+  <body class="w-full h-screen bg-white text-xs pt-12">
+    <!-- 22-10-10 -->
+    <header class="fixed flex top-0 left-0 w-full bg-main-color z-20 px-4 duration-500 ease-in h-12">
+      <!-- 22-10-10 -->
+      <nav class="flex justify-between items-center w-full h-full z-50 relative border-b border-b-gray-400">
+        <!-- 22-10-10 -->
+        <!-- Navigation Toggle Button | Start -->
+        <div class="flex justify-between items-center w-full text-lg">
+          <div class="inline-flex" id="nav-toggle">
+            <i class="bx bx-grid-alt cursor-pointer"></i>
+          </div>
+          <!-- 22-10-10 -->
+          <a href="home.html" class="font-bold tracking-tighter leading-4 text-center text-xs">
+            Multi <br />
+            Wallet
+          </a>
+          <!-- 22-10-10 -->
+        </div>
+        <!-- Navigation Toggle Button | End -->
+        <!-- Navigation Menu | Start -->
+        <div class="absolute w-full hidden h-full top-20 left-0 py-4" id="nav-menu">
+          <ul
+            class="flex flex-col px-12 h-[60vh] py-16 gap-6 bg-main-color shadow shadow-gray-600 rounded-xl transition-shadow"
+          >
+            <li class="font-bold">
+              <a href="home.html" class="text-sm hover:text-yellow-400"> Home</a>
+            </li>
+            <li class="font-bold">
+              <a href="transaction.html" class="text-sm hover:text-yellow-400">G Transactions</a>
+            </li>
+            <li class="font-bold">
+              <a href="historyconversion.html" class="text-sm hover:text-yellow-400">G-Pay Conversion History</a>
+            </li>
+            <li class="font-bold">
+              <a href="historypayment.html" class="text-sm hover:text-yellow-400">G-Pay Payment History</a>
+            </li>
+            <li class="font-bold">
+              <a href="mypage.html" class="text-sm hover:text-yellow-400"> My Page</a>
+            </li>
+            <li class="font-bold">
+              <div class="text-sm hover:text-yellow-400" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Language
+              </div>
+            </li>
+            <li class="font-bold mt-28">
+              <a href="#" class="text-sm hover:text-yellow-400">Log Out</a>
+            </li>
+          </ul>
+
+          <div class="absolute top-10 left-5 font-bold cursor-pointer" id="nav-close">
+            <i class="bx bx-x text-lg"></i>
+          </div>
+        </div>
+        <!-- Navigation Menu | End -->
+      </nav>
+    </header>
+    <!-- language  Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content rounded-lg p-5">
+          <div class="modal-header text-center">
+            <h5 class="modal-title w-full" id="exampleModalLabel">
+              <div class="w-full flex flex-col items-center">
+                <svg
+                  class="mx-auto mb-4 w-14 h-14 text-gray-400 dark:text-gray-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-center text-lg font-normal text-gray-500 py-5 grid grid-cols-1 gap-2">
+              <a href="" class="block hover:text-blue-800">KOREA </a>
+              <a href="" class="block hover:text-blue-800">INDIA</a>
+              <a href="" class="block hover:text-blue-800">THAILAND</a>
+              <a href="" class="block hover:text-blue-800">VIETNAM</a>
+              <a href="" class="block hover:text-blue-800">PHILIPPINES</a>
+              <a href="" class="block hover:text-blue-800">SINGAPORE</a>
+              <a href="" class="block hover:text-blue-800">CHINA</a>
+              <a href="" class="block hover:text-blue-800">JAPAN</a>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              data-bs-dismiss="modal"
+              type="button"
+              class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+            >
+              Changes
+            </button>
+            <button
+              data-bs-dismiss="modal"
+              type="button"
+              class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10"
+            >
+              cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Padding : 0 - 22-10-10 -->
+    <main class="">
+      <section class="container mx-auto">
+        <!-- 22-10-10 -->
+        <a href="home.html" class="text-sm flex items-center gap-2 shadow bg-main-color px-3 py-5 rounded-b-2xl">
+          <i class="bx bx-chevron-left bx-sm"></i>
+          <div class="font-semibold">G-Pay Conversion</div>
+        </a>
+        <!-- 22-10-10 -->
+      </section>
+      <!-- 22-10-10 -->
+      <section class="container mx-auto mt-8 px-8">
+        <!-- 22-10-10 -->
+        <div class="bg-main-color px-3 py-3 rounded-2xl shadow-xl">
+          <div class="flex justify-between items-center w-full border-b py-2">
+            <div class="px-3 py-1">Select Coin</div>
+            <select name="" id="" class="px-3 py-1 bg-transparent">
+              <option value="" class="bg-black text-white" selected>Select</option>
+              <option value="" class="bg-black text-white">Coin</option>
+              <option value="" class="bg-black text-white">Coin</option>
+              <option value="" class="bg-black text-white">Coin</option>
+            </select>
+          </div>
+          <div class="flex justify-between items-center w-full border-b py-2">
+            <div class="px-3 py-1">Region</div>
+            <div name="" id="" class="px-3 py-1">KOR</div>
+          </div>
+          <div class="flex justify-between items-center w-full border-none py-2">
+            <div class="px-3 py-1">1 Coin</div>
+            <div class="px-3 py-1">53.54 <span>KRW</span></div>
+          </div>
+        </div>
+      </section>
+      <!-- 22-10-10 -->
+      <section class="container mx-auto mt-8">
+        <!-- 22-10-10 -->
+        <div class="text-center px-5 py-2 text-xs bg-gradient-to-b from-violet-900 to-black text-white">
+          <p>Converted G-Pay can purchase 999.9% gold bars from gold vending machines in the selected country.</p>
+        </div>
+      </section>
+      <!-- 22-10-10 -->
+      <section class="container mx-auto mt-8 px-8">
+        <div class="bg-main-color px-3 py-5 rounded-2xl shadow-xl">
+          <!-- List -->
+          <div>
+            <div class="w-40 text-center py-0.5">Application Quantity</div>
+            <div class="border-b border-gray-500 flex justify-between items-center mr-12 ml-20 py-2">
+              <div class="">100</div>
+              <div class="">GGM</div>
+            </div>
+          </div>
+          <!-- List -->
+          <div class="mt-1">
+            <div class="w-40 text-center py-0.5">Fee (5%)</div>
+            <div class="border-b border-gray-500 flex justify-between items-center mr-12 ml-20 py-2">
+              <div class="">5</div>
+              <div class="">GGM</div>
+            </div>
+          </div>
+          <!-- List -->
+          <div class="mt-1">
+            <div class="w-40 text-center py-0.5">Conversation Quantity</div>
+            <div class="border-b border-gray-500 flex justify-between items-center mr-12 ml-20 py-2">
+              <div class="">95</div>
+              <div class="">GGM</div>
+            </div>
+          </div>
+          <!-- List -->
+          <div class="mt-1">
+            <div class="w-40 text-center py-0.5">Conversation G-Pay</div>
+            <div class="border-b border-gray-500 flex justify-between items-center mr-12 ml-20 py-2">
+              <div class="">4750</div>
+              <div class="">G-Pay</div>
+            </div>
+          </div>
+        </div>
+        <!-- 22-10-10 -->
+        <div class="flex justify-center">
+          <button
+            type="button"
+            class="btn-small btn-rounded btn-gradient-second w-fit py-2 px-20 mt-8"
+            data-bs-toggle="modal"
+            href="#conversion"
+          >
+            Apply
+          </button>
+        </div>
+        <!-- 22-10-10 -->
+      </section>
+    </main>
+
+    <!-- Modal | Start -->
+
+    <!-- Modal Conversation | Start -->
+    <div class="modal fade" id="conversion" tabindex="-1" aria-labelledby="conversionLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="">
+            <div class="bg-main-color flex items-center justify-center py-2 px-5 text-sm">
+              <h5 class="" id="conversionLabel">Conversion</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="px-3 py-5 text-xs text-black">
+              <p class="py-2 text-sm tracking-tighter">
+                Conversion request GGM coin: <span>2,000 </span><span>GGM</span>
+              </p>
+              <p class="py-2 text-sm tracking-tighter">Would you like to convert to <span>100,000 </span>G-Pay ?</p>
+            </div>
+            <div class="mb-5">
+              <div class="flex justify-between items-center px-3 gap-2">
+                <button type="button" class="btn btn-primary text-xs py-2 px-6 w-full" data-bs-dismiss="modal">
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-cancel text-xs py-2 px-6 w-full"
+                  data-bs-toggle="modal"
+                  href="#conversionConfirm"
+                >
+                  Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Conversation | End -->
+
+    <!-- Modal Conversation Confirm | Start -->
+    <div
+      class="modal fade"
+      id="conversionConfirm"
+      tabindex="-1"
+      aria-labelledby="conversionConfirmLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="rounded-t-md pb-2 shadow shadow-blue-800">
+            <div class="bg-blue-600 text-white flex items-center justify-center py-2 px-5 text-sm">
+              <h5 class="" id="conversionConfirmLabel">Conversion</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="px-3 py-5 text-xs text-black">
+              <p class="text-sm tracking-tighter"><span> 100,000 </span> G-Pay</p>
+              <p class="text-sm">The conversion is complete.</p>
+              <p class="py-2 text-sm tracking-tighter">You can check the conversion history.</p>
+            </div>
+            <div class="mb-5">
+              <div class="flex justify-between items-center px-3 gap-2">
+                <button type="button" class="btn btn-cancel text-xs py-2 px-6 w-full" data-bs-dismiss="modal">
+                  Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Conversation Confirm | End -->
+
+    <!-- Side Navigation JS -->
+    <script src="./assets/js/navi.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/datepicker.js"></script>
+  </body>
+</html>
